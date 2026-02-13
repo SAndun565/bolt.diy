@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && cp -r build/server .netlify/functions/server 2>/dev/null || true"
   publish = "build/client"
 
 [build.environment]
@@ -8,8 +8,13 @@
   NODE_OPTIONS = "--max-old-space-size=8192"
 
 [[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+
+[[redirects]]
   from = "/*"
-  to = "/.netlify/functions/remix-server"
+  to = "/index.html"
   status = 200
 
 [[headers]]
