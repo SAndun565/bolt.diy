@@ -7,6 +7,3 @@ send_metrics = false
 
 [build]
 command = "NODE_OPTIONS='--max-old-space-size=8192' npm install --legacy-peer-deps && npm run build"
-
-[pages]
-deployment_command = "npx wrangler pages deploy . --project-name=bolt"
