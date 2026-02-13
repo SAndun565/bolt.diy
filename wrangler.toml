@@ -1,9 +1,0 @@
-#:schema node_modules/wrangler/config-schema.json
-name = "bolt"
-compatibility_flags = ["nodejs_compat"]
-compatibility_date = "2025-03-28"
-pages_build_output_dir = "./build/client"
-send_metrics = false
-
-[build]
-command = "NODE_OPTIONS='--max-old-space-size=8192' npm install --legacy-peer-deps && npm run build"
