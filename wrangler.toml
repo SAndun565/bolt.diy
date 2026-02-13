@@ -6,4 +6,4 @@ pages_build_output_dir = "./build/client"
 send_metrics = false
 
 [build]
-command = "NODE_OPTIONS='--max-old-space-size=8192' npm run build"
+command = "NODE_OPTIONS='--max-old-space-size=8192' npm install --legacy-peer-deps && npm run build"
